@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page Tailwind</title>
+
+  <!-- Tailwind CSS -->
+  <link href="output.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    /* Hamburger animation */
+    .line {
+      transition: all 0.3s ease-in-out;
+    }
+    .open .line1 {
+      transform: rotate(45deg) translateY(6px);
+    }
+    .open .line2 {
+      opacity: 0;
+    }
+    .open .line3 {
+      transform: rotate(-45deg) translateY(-6px);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-orange-400 via-pink-500 to-rose-500
+  fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-2xl font-bold text-white-600">PERNIK BUNDAAA</div>
+
+      <!-- Hamburger Icon -->
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1">
+        <span class="line line1 w-6 h-0.5 bg-gray-800"></span>
+        <span class="line line2 w-6 h-0.5 bg-gray-800"></span>
+        <span class="line line3 w-6 h-0.5 bg-gray-800"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row gap-4 md:gap-6 font-medium text-white-600 absolute md:static bg-white md:bg-transparent top-full left-0 w-full md:w-auto px-4 py-4 md:py-0 shadow-md md:shadow-none z-40">
+        <li><a href="#home" class="block py-2 hover:text-sky-600">Home</a></li>
+        <li><a href="#about" class="block py-2 hover:text-indigo-600">Tentang</a></li>
+        <li><a href="#services" class="block py-2 hover:text-indigo-600">Layanan</a></li>
+        <li><a href="#contact" class="block py-2 hover:text-indigo-600">Kontak</a></li>
+        <li><a href="#gallery" class="block py-2 hover:text-indigo-600">Gallery</a></li>
+        <li><a href="#contact" class="block py-2 hover:text-indigo-600">Profile</a></li>
+        <a href="https://wa.me/628569900666" class="inline-block bg-gradient-to-r from-pink-500 to-orange-400 text-white py-2 px-4 rounded-full hover:bg-indigo-700 transition">Whatsapp</a>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative w-full min-h-screen overflow-hidden pt-16 overflow-x-hidden">
+    <div class="swiper absolute inset-0 z-0">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://img.freepik.com/free-photo/majestic-mountain-peak-tranquil-winter-landscape-generated-by-ai_188544-15662.jpg?semt=ais_hybrid&w=740" class="w-full h-full object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://img.freepik.com/free-photo/sunset-silhouettes-trees-mountains-generative-ai_169016-29371.jpg?semt=ais_hybrid&w=740" class="w-full h-full object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://img.freepik.com/free-photo/nighttime-nature-landscape-galaxy-mountain-water-star-beauty-generative-ai_188544-9736.jpg?semt=ais_hybrid&w=740" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+      
+
+   <!-- Overlay + Text -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center text-center px-4 z-10">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Kiri: Text Copywriting -->
+      <div data-aos="fade-right">
+        <h1 class="text-white md:text-6xl font-bold drop-shadow-xl">Halo, BS LADY!</h1>
+        <p class="text-rose-100 md:text-lg">Kami menyediakan barang barang brand yang original, silahkan diliat-liat!</p>
+      </div>
+
+      <!-- Kanan: Gambar -->
+      <div class="flex justify-center" data-aos="fade-left">
+        <!-- <img src="img/fotoProfile.png" alt="Developer" class="w-80 md:w-96 rounded-xl shadow-lg" /> -->
+      </div>
+
+    </div>
+  </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-100 px-4" data-aos="fade-right">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-rose-600 mb-4">Tentang Kami</h2>
+      <p class="text-gray-700">Kami adalah tim pengembang profesional yang siap membantu Anda membangun solusi digital yang efisien dan efektif.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white px-4" data-aos="fade-left">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-rose-600 mb-10">Layanan Kami</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-indigo-100 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">Website</h3>
+          <p>Kami buat website yang keren dan customize.</p>
+        </div>
+        <div class="bg-indigo-100 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">Aplikasi</h3>
+          <p>Aplikasi desktop, mobile, atau sistem kasir secara customize.</p>
+        </div>
+        <div class="bg-indigo-100 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">Desain</h3>
+          <p>UI/UX, logo, dan desain sosial media.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100 px-4" data-aos="zoom-in">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-rose-600 mb-4">Hubungi Kami</h2>
+      <p class="text-gray-700 mb-6">Tertarik kerja sama? Hubungi kami sekarang juga!</p>
+      <a href="mailto:demasabiansya@gmail.com" class="inline-block bg-gradient-to-r from-pink-500 to-orange-400 text-white py-2 px-4 rounded-full hover:bg-indigo-700 transition">Email Kami</a>
+    </div>
+  </section>
+  <!-- galley -->
+  <section id="gallery" class="py-20 bg-white px-4">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-rose-600 mb-10">Galeri Produk</h2>
+
+        <!-- Filter Buttons -->
+        <div>
+            <div class="flex justify-center space-x-4 mb-8">
+                <button onclick="filterGallery('semua')" class="px-4 py-2 rounded-full border hover:bg-rose-500 hover:text-white transition">Semua</button>
+                <button onclick="filterGallery('scarf')" class="px-4 py-2 rounded-full border hover:bg-rose-500 hover:text-white transition">Scarf</button>
+                <button onclick="filterGallery('baju')" class="px-4 py-2 rounded-full border hover:bg-rose-500 hover:text-white transition">Baju</button>
+                <button onclick="filterGallery('celana')" class="px-4 py-2 rounded-full border hover:bg-rose-500 hover:text-white transition">Celana</button>
+                <button onclick="filterGallery('sepatu')" class="px-4 py-2 rounded-full border hover:bg-rose-500 hover:text-white transition">Sepatu</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Scarf -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item scarf">
+                    <img src="https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Scarf" onclick="openModal('https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321')">
+                    <p class="text-center font-semibold">Scarf Floral</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item scarf">
+                    <img src="img/hijab/misool_sand.jpg" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Scarf" onclick="openModal('img/hijab/misool_sand.jpg')">
+                    <p class="text-center font-semibold">Misool Sand</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item scarf">
+                    <img src="img/hijab/misool_lagoon.jpg" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Scarf" onclick="openModal('img/hijab/misool_lagoon.jpg')">
+                    <p class="text-center font-semibold">Misool Lagoon</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item scarf">
+                    <img src="https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Scarf" onclick="openModal('https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321')">
+                    <p class="text-center font-semibold">Scarf Floral</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item scarf">
+                    <img src="https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Scarf" onclick="openModal('https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321')">
+                    <p class="text-center font-semibold">Scarf Floral</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item scarf">
+                    <img src="https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Scarf" onclick="openModal('https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321')">
+                    <p class="text-center font-semibold">Scarf Floral</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item scarf">
+                    <img src="https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Scarf" onclick="openModal('https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321')">
+                    <p class="text-center font-semibold">Scarf Floral</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item scarf">
+                    <img src="https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Scarf" onclick="openModal('https://cdn.shopify.com/s/files/1/0305/2116/3913/files/KellyJacquardSquare-ToastedAlmond3.jpg?v=1744341321')">
+                    <p class="text-center font-semibold">Scarf Floral</p>
+                </div>
+
+                <!-- Baju -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item baju">
+                    <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-179146873/klamby_wearing_klamby_kumara_shirt_-_artichoke_full01_d5nntdm9.jpg" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Baju" onclick="openModal('https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-179146873/klamby_wearing_klamby_kumara_shirt_-_artichoke_full01_d5nntdm9.jpg')">
+                    <p class="text-center font-semibold">Baju Casual</p>
+                </div>
+
+                <!-- Celana -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item celana">
+                    <img src="https://klamby.id/cdn/shop/files/DSC07209.jpg?v=1728667827&width=1080" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Celana" onclick="openModal('https://klamby.id/cdn/shop/files/DSC07209.jpg?v=1728667827&width=1080')">
+                    <p class="text-center font-semibold">Celana Jeans</p>
+                </div>
+
+                <!-- Sepatu -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-xl transition item sepatu">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuxFAMj7qHzospTIefEX3YMeCjMH2z3FgcMQ&s" class="w-full h-48 object-cover rounded mb-2 cursor-pointer" alt="Sepatu" onclick="openModal('https://source.unsplash.com/400x400/?shoes')">
+                    <p class="text-center font-semibold">Sepatu Sneakers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Dialog -->
+<dialog id="imageModal" class="bg-white p-4 rounded-lg max-w-3xl mx-auto">
+    <button onclick="closeModal()" class="absolute top-2 right-2 text-white bg-red-600 rounded-full p-1">X</button>
+    <img id="modalImage" class="w-full h-auto rounded-lg" alt="Preview Image">
+</dialog>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-amber-300 via-rose-400 to-pink-300
+  text-center py-6 mt-12">
+    <p class="text-sm text-white opacity-80">&copy; 2025 Dibuat dengan ❤️ oleh DCP</p>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
+
+  <!-- Navbar Toggle Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('open');
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+ <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('gallery', () => ({
+        filter: 'all',
+        modalOpen: false,
+        modalImage: '',
+  
+        openModal(imageUrl) {
+          this.modalImage = imageUrl;
+          this.modalOpen = true;
+        }
+      }));
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function openModal(imageUrl) {
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        modalImage.src = imageUrl;
+        modal.showModal(); // Show the modal
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.close(); // Close the modal
+    }
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => {
+            // If the category matches, show the item, else hide it
+            if (category === 'semua' || item.classList.contains(category)) {
+                item.style.display = 'block'; // Show the item
+            } else {
+                item.style.display = 'none'; // Hide the item
+            }
+        });
+    }
+</script>
+</body>
+</html>
